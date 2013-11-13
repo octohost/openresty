@@ -20,8 +20,6 @@ ENV PATH /usr/local/openresty/nginx/sbin:$PATH
 EXPOSE 80
 ADD . /app
 
-RUN chown -R root:root /app
-
 # CMD /etc/init.d/redis-server start && nginx -p /app/ -c conf/nginx.conf -g "daemon off;"
 
 CMD nginx -p /app/ -c conf/nginx.conf -g "daemon off;"
