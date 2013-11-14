@@ -20,4 +20,4 @@ ENV PATH /usr/local/openresty/nginx/sbin:$PATH
 EXPOSE 5000
 ADD . /app
 
-CMD /etc/init.d/redis-server start && nginx -p /app/ -c conf/nginx.conf -g "daemon off;"
+CMD /etc/init.d/redis-server start && cd /app && nginx -p /app/ -c conf/nginx.conf -g "daemon off;"
