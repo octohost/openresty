@@ -1,4 +1,4 @@
-local hitcounter = require "hitcounter"
+local hitcounter = require "app/hitcounter"
 
 if ngx.var.uri ~= '/' then
   ngx.status = ngx.HTTP_NOT_FOUND
