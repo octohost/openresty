@@ -17,7 +17,7 @@ RUN cd /tmp/ngx_openresty-1.4.2.8 && ./configure --with-luajit && make && make i
 
 ENV PATH /usr/local/openresty/nginx/sbin:$PATH
 
-EXPOSE 80
+EXPOSE 5000
 ADD . /app
 
 CMD /etc/init.d/redis-server start && nginx -p /app/ -c conf/nginx.conf -g "daemon off;"
