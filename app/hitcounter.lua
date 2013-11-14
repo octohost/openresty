@@ -3,7 +3,6 @@ local red = redis:new()
 
 function connect()
   red:set_timeout(1000) -- 1 sec
-
   local ok, err = red:connect("127.0.0.1", 6379)
   if not ok then
     ngx.say("failed to connect to redis: ", err)
