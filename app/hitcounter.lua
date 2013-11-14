@@ -9,7 +9,7 @@ if ngx.var.uri ~= '/' then
   return
 end
 
-ngx.say('<h1>Hit Counter</h1>')
+ngx.say('<h2>Nginx/OpenResty</h2>')
 
 local ok, err = red:connect("127.0.0.1", 6379)
 if not ok then
